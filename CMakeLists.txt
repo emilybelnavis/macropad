@@ -22,8 +22,14 @@ pico_sdk_init()
 
 add_executable(macropad_hid)
 target_sources(macropad_hid PUBLIC
-        src/main.c
-        src/usb_descriptors.c
+        src/main.cpp
+        src/InputEvent.cpp
+        src/InputEventPool.cpp
+        src/KeyboardState.cpp
+        src/usb_descriptors.cpp
+        src/board/board.cpp
+        src/input/InputDevice.cpp
+        src/input/BoardInput.cpp
 )
 
 target_include_directories(macropad_hid PUBLIC
